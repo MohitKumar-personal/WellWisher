@@ -60,9 +60,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey.shade100,
+      backgroundColor: Color(0xffffffff),
       appBar: AppBar(
-        backgroundColor: Color(0xff2A5794),
+        backgroundColor: Color(0xff16697a),
         elevation: 0,
         // leading: const BackButton(
         //   color: Color(0xff2A5794),
@@ -81,7 +81,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               const Text(
                   'Forgot Password',
                 style: TextStyle(
-                    color: Color(0xff2A5794),
+                    color: Color(0xff0b090a),
                     fontSize: 40,
                   fontFamily: 'LogoFont',
                 ),
@@ -91,7 +91,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
               MyTextField(
                   controller: _emailidController,
-                  hintText: 'Please enter your email',
+                  hintText: 'Email Address',
                   obscureText: false),
               const SizedBox(height: 25,),
 
@@ -112,7 +112,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                     }
                   },
                   // onTap: passwordReset,
-                  buttonColor: Color(0xff2A5794),
+                  buttonColor: Color(0xff16697a),
                   buttonTextColor: Colors.white,
                   text: 'Get Verification Link'),
             ],

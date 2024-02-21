@@ -106,7 +106,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey.shade100,
+      backgroundColor: Color(0xffffffff),
       body: SafeArea(
         child: Container(
           height: double.infinity,
@@ -120,14 +120,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   //BHARAT INNOVATION LOGO
                   const SizedBox(height: 50,),
                   SizedBox(
-                      height: 300, width: double.infinity,
-                      child: Image.asset('assets/images/logo/bharatinnovationlogo.png')),
+                      height: 250, width: double.infinity,
+                      child: Image.asset('assets/images/logo/teal.png')),
 
                   //LET'S CREATE AN ACCOUNT FOR YOU!
                   const Text('Let\'s create an account for you!',
                     style: TextStyle(
-                        color: Color(0xff2A5794),
-                        fontWeight: FontWeight.bold,
+                        color: Color(0xff0b090a),
+                        // fontWeight: FontWeight.bold,
                         fontSize: 16
                     ),
                   ),
@@ -144,7 +144,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   // INPUT EMAIL ADDRESS TEXTFIELD
                   MyTextField(
                     controller: emailidController,
-                    hintText: 'Please enter your email',
+                    hintText: 'Email Address',
                     obscureText: false,
                   ),
                   const SizedBox(height: 10,),
@@ -168,7 +168,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   MyButton(
                     text: 'Sign Up',
                     onTap: signUserUp,
-                    buttonColor: const Color(0xffd30001),
+                    buttonColor: const Color(0xff16697a),
                     buttonTextColor: Colors.white,
                   ),
                   const SizedBox(height: 25,),
@@ -218,7 +218,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     children: [
                       Text('Already have an account?',
                         style: TextStyle(
-                            color: Colors.grey[800],
+                            color: Color(0xff0b090a),
                             fontSize: 15
                         ),
                       ),
@@ -227,8 +227,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         onTap: widget.onTap,
                         child: const Text('Login now',
                           style: TextStyle(
-                              color: Color(0xff2A5794),
-                              fontWeight: FontWeight.bold,
+                              color: Color(0xff16697a),
+                              fontWeight: FontWeight.w700,
                               fontSize: 15
                           ),
                         ),

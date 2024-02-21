@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
               )
           ),
         ),
-        backgroundColor: Color(0xffd30001),
+        backgroundColor: Color(0xffd09999),
         dismissDirection: DismissDirection.up,
         behavior: SnackBarBehavior.floating,
         margin: EdgeInsets.only(
@@ -80,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey.shade100,
+      backgroundColor: Color(0xffffffff),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -91,14 +91,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 //BHARAT INNOVATION LOGO
                 const SizedBox(height: 50,),
                 SizedBox(
-                  height: 300, width: double.infinity,
-                    child: Image.asset('assets/images/logo/bharatinnovationlogo.png')),
+                  height: 250, width: double.infinity,
+                    child: Image.asset('assets/images/logo/teal.png')),
 
                 //WELCOME BACK, YOU'VE BEEN MISSED
                 const Text('Welcome back, you\'ve been missed',
                   style: TextStyle(
-                    color: Color(0xff2A5794),
-                    fontWeight: FontWeight.bold,
+                    color: Color(0xff0b090a),
+                    // fontWeight: FontWeight.bold,
                     fontSize: 16
                   ),
                 ),
@@ -107,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 // INPUT EMAIL ADDRESS TEXTFIELD
                 MyTextField(
                   controller: emailidController,
-                  hintText: 'Please enter your email',
+                  hintText: 'Email Address',
                   obscureText: false,
                 ),
                 const SizedBox(height: 10,),
@@ -134,8 +134,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: const Text('Forget Password?',
                           style: TextStyle(
-                              color: Color(0xff2A5794),
-                              fontWeight: FontWeight.bold,
+                              color: Color(0xff16697a),
+                              fontWeight: FontWeight.w700,
                               fontSize: 15
                           ),
                         ),
@@ -147,14 +147,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 //SIGN IN BUTTON LAYOUT
                 MyButton(
-                  text: 'Sign In',
+                  text: 'Log In',
                   onTap: signUserIn,
-                  buttonColor: const Color(0xffd30001),
+                  buttonColor: const Color(0xff16697a),
                   buttonTextColor: Colors.white,
                 ),
                 const SizedBox(height: 25,),
 
-                //AUTHENTICATION BUTTON LIKE GOOGLE AND APPLE ID
+                // AUTHENTICATION BUTTON LIKE GOOGLE AND APPLE ID
                 // Padding(
                 //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 //   child: Row(
@@ -184,14 +184,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 // Row(
                 //   mainAxisAlignment: MainAxisAlignment.center,
                 //   children: [
-                //     SquareTile(imagePath: 'assets/images/logo/google.png'),
+                //     SizedBox(
+                //         height: 50, width: 50,
+                //         child: Image.asset('assets/images/logo/google.png')),
                 //     SizedBox(width: 25,),
-                //     SquareTile(imagePath: 'assets/images/logo/apple.png'),
-                //
+                //     SizedBox(
+                //         height: 50, width: 50,
+                //         child: Image.asset('assets/images/logo/apple.png'))
                 //   ],
                 // ),
                 //
-                // SizedBox(height: 50,),
+                // SizedBox(height: 25,),
 
                 //NOT A MEMBER ? REGISTER NOW...
                 Row(
@@ -199,7 +202,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Text('Not a member?',
                       style: TextStyle(
-                          color: Colors.grey[800],
+                          color: Color(0xff0b090a),
                         fontSize: 15
                       ),
                     ),
@@ -208,8 +211,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       onTap: widget.onTap,
                       child: const Text('Register Now',
                         style: TextStyle(
-                          color: Color(0xff2A5794),
-                          fontWeight: FontWeight.bold,
+                          color: Color(0xff16697a),
+                          fontWeight: FontWeight.w700,
                           fontSize: 15
                         ),
                       ),

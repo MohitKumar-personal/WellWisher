@@ -87,7 +87,7 @@ flutter:
   fonts:
     - family: LogoFont
       fonts:
-        - asset: assets/fonts/BebasNeue-Regular.ttf
+        - asset: assets\fonts\Onest-VariableFont_wght.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:
