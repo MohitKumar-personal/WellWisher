@@ -7,14 +7,14 @@ import 'package:version_1/components/smart_device_box.dart';
 
 
 
-class DashBoardScreen extends StatefulWidget {
-  const DashBoardScreen({super.key});
+class DashBoardScreen2 extends StatefulWidget {
+  const DashBoardScreen2({super.key});
 
   @override
-  State<DashBoardScreen> createState() => _DashBoardScreenState();
+  State<DashBoardScreen2> createState() => _DashBoardScreenState2();
 }
 
-class _DashBoardScreenState extends State<DashBoardScreen> {
+class _DashBoardScreenState2 extends State<DashBoardScreen2> {
 
 
   // Sign out User Method
@@ -29,7 +29,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         .collection('UsersData')
         .doc(currentUser!.email)
         .get();
-
   }
 
 
