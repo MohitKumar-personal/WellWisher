@@ -6,18 +6,18 @@ import 'package:flutter/material.dart';
 
 class DashBoardScreen extends StatefulWidget{
   const DashBoardScreen({super.key});
-
   @override
   State<DashBoardScreen> createState() => _DashBoardScreenState();
 }
 
 class _DashBoardScreenState extends State<DashBoardScreen>{
-
+  String bpm = '0';
+  String steps = '0';
+  final db = FirebaseDatabase.instance.reference();
   // Sign Out User Method
   void signOutUser(){
     FirebaseAuth.instance.signOut();
   }
-
   //GET USER DETAILS
   final User? currentUser = FirebaseAuth.instance.currentUser;
   Future<DocumentSnapshot<Map<String,dynamic>>> getUserInfo() async{
@@ -26,7 +26,6 @@ class _DashBoardScreenState extends State<DashBoardScreen>{
         .doc(currentUser!.email)
         .get();
   }
-
   // Show Error Messages
   void showErrorMessage(String message){
     ScaffoldMessenger.of(context).showSnackBar(
@@ -51,7 +50,27 @@ class _DashBoardScreenState extends State<DashBoardScreen>{
     );
   }
 
-  final ref = FirebaseDatabase.instance.ref('Values');
+  @override
+  void initState(){
+    super.initState();
+    activateListeners();
+  }
+  
+  activateListeners(){
+    db.child('Values/BPM').onValue.listen((event) {
+      final String bpmValue = event.snapshot.value.toString();
+      setState(() {
+        bpm = bpmValue;
+      });
+    });
+    db.child('Values').child('Steps').onValue.listen((event) {
+      final String stepsValue = event.snapshot.value.toString();
+      setState(() {
+        steps = stepsValue;
+      });
+    });
+  }
+
 
   Widget build(BuildContext){
     return Scaffold(
@@ -161,85 +180,85 @@ class _DashBoardScreenState extends State<DashBoardScreen>{
                       color: Color(0xff82c0cc),
                       borderRadius: BorderRadius.circular(30.0)
                   ),
-                  child: Expanded(
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 20.0,
-                                vertical: 25,
+                  child: Row(
+                    children: [
+                      Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 20.0,
+                              vertical: 25,
+                            ),
+                            child: Container(
+                              height: 80,
+                              decoration: BoxDecoration(
+                                  color: Color(0xffffffff),
+                                  borderRadius: BorderRadius.circular(20.0)
                               ),
-                              child: Container(
-                                height: 80,
-                                decoration: BoxDecoration(
-                                    color: Color(0xffffffff),
-                                    borderRadius: BorderRadius.circular(20.0)
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 15.0,
                                 ),
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: 15.0,
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        child: Text('82',
-                                          style: TextStyle(
-                                              fontSize: 50,
-                                              color: Color(0xff000000),
-                                              fontWeight: FontWeight.bold,
-                                              fontFamily: 'Onest'
-                                          ),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      child: Text('$bpm',
+                                        style: TextStyle(
+                                            fontSize: 50,
+                                            color: Color(0xff000000),
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Onest'
                                         ),
                                       ),
-                                      SizedBox(width: 10,),
-                                      Container(
-                                        child: Text('bpm',
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.bold,
-                                              fontFamily: 'Onest'
-                                          ),
+                                    ),
+                                    SizedBox(width: 5,),
+                                    Container(
+                                      child: Text('bpm',
+                                        style: TextStyle(
+                                            fontSize: 25,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'Onest'
                                         ),
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
-                            Text('HEART',
-                              style: TextStyle(
-                                  fontSize: 35,
-                                  fontFamily: 'Onest',
-                                  fontWeight: FontWeight.w700
-                              ),),
-                            Text('BEAT',
-                              style: TextStyle(
-                                  fontSize: 35,
-                                  fontFamily: 'Onest',
-                                  fontWeight: FontWeight.w700
-                              ),),
-                          ],
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 10, bottom: 10),
+                          ),
+                          Text('HEART',
+                            style: TextStyle(
+                                fontSize: 35,
+                                fontFamily: 'Onest',
+                                fontWeight: FontWeight.w700
+                            ),),
+                          Text('BEAT',
+                            style: TextStyle(
+                                fontSize: 35,
+                                fontFamily: 'Onest',
+                                fontWeight: FontWeight.w700
+                            ),),
+                        ],
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 10, bottom: 10),
+                        child: Expanded(
                           child: Container(
                             height: 250,
-                            width: 170,
+                            width: 150,
                             decoration: BoxDecoration(
                               color: Color(0xffffffff),
                               borderRadius: BorderRadius.circular(30.0),
                               // border: Border.all(),
                             ),
                             child: Image.asset('assets/images/illustrationart/heart.png',
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fitWidth,
                             ),
                           ),
-                        )
-                      ],
-                    ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ),
@@ -314,7 +333,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>{
                                   child: Row(
                                     children: [
                                       Container(
-                                        child: Text('2932',
+                                        child: Text('$steps',
                                           style: TextStyle(
                                               fontSize: 50,
                                               color: Color(0xff000000),
