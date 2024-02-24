@@ -204,7 +204,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>{
                                     Container(
                                       child: Text('$bpm',
                                         style: TextStyle(
-                                            fontSize: 50,
+                                            fontSize: 45,
                                             color: Color(0xff000000),
                                             fontWeight: FontWeight.bold,
                                             fontFamily: 'Onest'
@@ -215,7 +215,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>{
                                     Container(
                                       child: Text('bpm',
                                         style: TextStyle(
-                                            fontSize: 25,
+                                            fontSize: 20,
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold,
                                             fontFamily: 'Onest'
@@ -252,8 +252,10 @@ class _DashBoardScreenState extends State<DashBoardScreen>{
                               borderRadius: BorderRadius.circular(30.0),
                               // border: Border.all(),
                             ),
-                            child: Image.asset('assets/images/illustrationart/heart.png',
-                              fit: BoxFit.fitWidth,
+                            child: Center(
+                              child: Image.asset('assets/images/illustrationart/heart.png',
+                                fit: BoxFit.fitWidth,
+                              ),
                             ),
                           ),
                         ),
@@ -335,7 +337,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>{
                                       Container(
                                         child: Text('$steps',
                                           style: TextStyle(
-                                              fontSize: 50,
+                                              fontSize: 40,
                                               color: Color(0xff000000),
                                               fontWeight: FontWeight.bold,
                                               fontFamily: 'Onest'
