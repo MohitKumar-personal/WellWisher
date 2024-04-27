@@ -38,13 +38,13 @@ To clone and run this app, you'll need [Git](https://git-scm.com/downloads) an
 ### Clone this repository
 
 ```python
-$ git clone https://github.com…..
+$ git clone https://github.com/MohitKumar-personal/WellWisher.git
 ```
 
 ### Go into the repository
 
 ```python
-$ cd version1
+$ cd Software_module/version_1
 ```
 
 ### Install packages
@@ -60,35 +60,10 @@ $ flutter run
 ```
 
 ## Screenshots of Mobile App UI
+| Splash Screen | Login Screen | Signup Screen | Forget Password Screen |
+| :--: | :--: | :--: | :--: |
+| ![splash-screen](https://github.com/MohitKumar-personal/WellWisher/assets/99556620/dad5f6bb-522f-4312-99c4-ab413ae5bcc1) | ![login-screen](https://github.com/MohitKumar-personal/WellWisher/assets/99556620/7b1603cd-2eab-440f-9d3c-882459e59dab) | ![signup-screen](https://github.com/MohitKumar-personal/WellWisher/assets/99556620/44876c36-f4f1-4ccf-b116-31f2252661ae) | ![forget-password-screen](https://github.com/MohitKumar-personal/WellWisher/assets/99556620/41fc82f8-ec9c-4477-ac88-a1af4a75597f) |
 
-![Splash Screen](README%209ba2bc9739f24a08b6ad0d11fd52f154/ccb92f5a-c671-4ee0-aca4-78624f63f00a.png)
-
-Splash Screen
-
-![*Signup Screen*](README%209ba2bc9739f24a08b6ad0d11fd52f154/e98aab91-b313-4ac8-8211-a9d52214f916.png)
-
-*Signup Screen*
-
-![*Login Screen*](README%209ba2bc9739f24a08b6ad0d11fd52f154/2c9187be-4da2-46af-93de-2bf8dcc7c841.png)
-
-*Login Screen*
-
-![*Forget Password Screen*](README%209ba2bc9739f24a08b6ad0d11fd52f154/ced67184-b48c-4846-a455-356db53d3ed9.png)
-
-*Forget Password Screen*
-
-![*Dashboard Screen*](README%209ba2bc9739f24a08b6ad0d11fd52f154/fc724e04-73da-4956-89b3-09ed60647a15.png)
-
-*Dashboard Screen*
-
-![ *Heart Rate Screen*](README%209ba2bc9739f24a08b6ad0d11fd52f154/7321a6a6-d714-424b-8981-29af13f2a7be.png)
-
- *Heart Rate Screen*
-
-![*Steps Screen*](README%209ba2bc9739f24a08b6ad0d11fd52f154/94ae3fbf-9e5c-461e-8879-a9e6e002e2bd.png)
-
-*Steps Screen*
-
-![*Profile Screen*](README%209ba2bc9739f24a08b6ad0d11fd52f154/6123328f-5763-406f-bf7a-914ded933313.png)
-
-*Profile Screen*
+| Dashboard Screen | Heart Rate Screen | Steps Screen | Profile Screen |
+| :--: | :--: | :--: | :--: |
+| ![dashboard-screen](https://github.com/MohitKumar-personal/WellWisher/assets/99556620/20fe4ee9-2a15-4f11-a391-6c6be8ef4755) | ![heart-rate-screen](https://github.com/MohitKumar-personal/WellWisher/assets/99556620/cd9480bf-87f4-4b47-adc0-c4bd08efa26c) | ![steps-screen](https://github.com/MohitKumar-personal/WellWisher/assets/99556620/855f3bc7-c2ed-45cc-85cb-9b0434d10712) | ![profile-screen](https://github.com/MohitKumar-personal/WellWisher/assets/99556620/6f8d2f23-da87-420a-b503-9cddf6ad85fe) |
