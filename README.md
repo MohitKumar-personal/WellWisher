@@ -38,13 +38,13 @@ To clone and run this app, you'll need [Git](https://git-scm.com/downloads) an
 ### Clone this repository
 
 ```python
-$ git clone https://github.com…..
+$ git clone https://github.com/MohitKumar-personal/WellWisher.git
 ```
 
 ### Go into the repository
 
 ```python
-$ cd version1
+$ cd Software_module/version_1
 ```
 
 ### Install packages
